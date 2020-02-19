@@ -1,0 +1,26 @@
+{% extends "loggedBase.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method=POST action="{{ url_for('donate') }}">
+                <div class="form-group">
+                    <label for="exampleInputDead1">Name of Decreased</label>
+                    <input type="text" class="form-control" name="deadman" placeholder="Name of Deceased">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputHosptial1">Hospital</label>
+                    <input type="text" class="form-control" name="hospital" placeholder="Hospital">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputTime1">Time Of Death</label>
+                    <input type="time" class="form-control" name="timeOfDeath" placeholder="Time Of Death">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Log Death</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

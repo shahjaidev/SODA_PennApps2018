@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+  h1 {
+    text-align: center
+  }
+body{
+  margin: 100 px;
+  padding: 100 px;
+  height: 100vh;
+}
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+#particles-js
+{
+  height: 100%;
+  background: #fff;
+}
+</style>
+
+<body>
+<h1> <b>S</b>mart <b>O</b>rgan <b>D</b>onation <b>A</b>pp (SODA) </h1>
+
+<div>
+<h2> Why SODA? </h2>
+<h3> Why is organ donation important? </h3>
+<p> One organ donor can save up to eight lives. One eye and tissue donor can save or improve the lives of up to 50 people. This means an organ, eye and tissue donor can potentially impact the lives of 58 people! Successful transplantation often is enhanced by the matching of organs between members of the same ethnic and racial group. </p>
+
+<h3> How does organ donation currently work in developing countries? </h3>
+  <p> Unfortunately, in many countries, there is no such infrastructure available that organizes organ donations and manages the information of patients efficiently, resulting in the loss of many lives. On average, 20 people die each day while waiting for a transplant. SODA hopes to bridges the gap between organ donors and receivers by providing an online platform which performs organ matching for heart, lung and liver, through utilizing Alexa.</p>
+
+  <p> The diagram below illustrates the current situation of organ donations in different countries. </p>
+
+<div style="text-align: center">
+  <img src="{{url_for('static',filename='map.png')}}" alt="map"
+  height="420">
+  <p> <i> Reference: Global Observatory on Donation and Translantation (WHO-ONT) </i> </p>
+</div>
+
+
+
+</div>
+
+<br />
+
+<div>
+<h2> How does SODA work? </h2>
+  <p> SODA uses geopositional data and an indepth patient history in line with a comprehensive algorithm to efficiently and rapidly match recently deceased registered donors to acceptors in dire need of organs. This virtual infrastructure currently only accomadates three major organs systems that account for the majority of organ transplants in developing countries: heart, lungs, kidneys. This system, can
+  in the future act in tandem with voice activated devices, such as the Amazon Alexa, in order to assist physicians with comprehensive pre-operational knowledge of patients previous history in order to save lives!!! and personalize patient care!!!</p>
+  <br>
+  <br>
+  <br>
+</div>
+</bodY>
+
+{% endblock %}

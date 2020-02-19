@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <title>SODA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+  body{
+  text-align:center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+#particles-js
+{
+  height: 100%;
+  background: #fff;
+}
+</style>
+
+<!-- <body background="{{url_for('static', filename='patient1.jpg')}}"> -->
+<body>
+<div id="particles-js">
+<br><br><br><br>
+<img src="{{url_for('static',filename='sodalogo.png')}}" alt="SODA logo"
+height="420">
+<h1> Welcome to <b>S</b>mart <b>O</b>rgan <b>D</b>onation <b>A</b>pp! </h1>
+<!--  <p>
+    Welcome back {{name}}
+    Smart Organ Donation App, a web app that supports the infrastructure for an organ donation network between local hospitals that can be implemented in rural situations/local hospitals.
+  </p>
+-->
+  <script type="text/javascript" src ="particles.js"></script>
+  <script type="text/javascript" src ="app.js"></script>
+</div>
+</body>
+{% endblock %}

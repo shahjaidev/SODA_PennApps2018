@@ -1,0 +1,253 @@
+{% extends "loggedBase.html" %}
+{% block content %}
+<div>
+  <h1>{{success}}</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method=POST action="{{ url_for('registerPatient') }}">
+                <div class="form-group">
+                    <label for="exampleInputName1">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Patient Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputAge1">Age</label>
+                    <input type="number" class="form-control" name="age" placeholder="Patient Age">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputHeight1">Height</label>
+                    <input type="number" class="form-control" name="height" placeholder="Patient Height">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputWeight1">Weight</label>
+                    <input type="number" class="form-control" name="weight" placeholder="Patient Weight">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputBirthdate1">Birthdate</label>
+                    <input type="date" class="form-control" name="birthdate" placeholder="Patient Birthdate">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputBlood1">Bloodtype</label>
+                    <input type="text" class="form-control" name="bloodtype" placeholder="Bloodtype">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Gender</label>
+                    <input type="text" class="form-control" name="gender" placeholder="Patient Gender">
+                </div>
+
+
+                <div>
+                    <legend>Patient Self-reported medical conditions and history </legend>
+                </div>
+
+                <fieldset>
+                  <legend>Polyuria?</legend>
+                  <div class="form-group">
+                    <input type="checkbox" id="yes" name="polyuria" value="yes" />Yes <br />
+
+                  </div class="form-group">
+                  <div>
+                    <input type="checkbox" id="no" name="polyuria" value="no" />No <br />
+
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Do you have brown, red, or purple urine?</legend>
+                  <div>
+                    <input type="checkbox"  name="urine" value="yes" />Yes <br />
+                  </div>
+                  <div>
+                    <input type="checkbox"  name="urine" value="no" />No <br />
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>Kidney Disease?</legend>
+                <div>
+                <input type="checkbox" name="kidneyDisease" value="yes"= />Yes <br />
+
+                </div>
+                <div>
+                <input type="checkbox"  name="kidneyDisease" value="no" />No <br />
+
+                </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>Seizures?</legend>
+                <div>
+                <input type="checkbox"  name="seizures" value="yes" />Yes <br />
+
+                </div>
+                <div>
+                <input type="checkbox"  name="seizures" value="no" />No <br />
+
+                </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>Palpitations?</legend>
+                <div>
+                <input type="checkbox"  name="palpitations" value="yes" />Yes <br />
+
+                </div>
+
+                <div>
+                <input type="checkbox"  name="palpitations" value="no" />No <br />
+
+                </div>
+                </fieldset>
+
+
+                <fieldset>
+                <legend>Have you smoked for more than 20 years?</legend>
+                <div>
+                <input type="checkbox"  name="smoking" value="yes" />Yes <br />
+
+                </div>
+
+                <div>
+                <input type="checkbox"  name="smoking" value="no" />No <br />
+
+                </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>Insomnia?</legend>
+                <div>
+                <input type="checkbox"  name="insomnia" value="yes" />Yes <br />
+
+                </div>
+                <div>
+                <input type="checkbox"  name="insomnia" value="no" />No <br />
+
+                </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>Blurred Vision?</legend>
+                <div>
+                <input type="checkbox"  name="blurredVision" value="yes" />Yes <br />
+
+                </div>
+                <div>
+                <input type="checkbox"  name="blurredVision" value="no" />No <br />
+
+                </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>HIV/Hepatitis?</legend>
+                <div>
+                <input type="checkbox"  name="HIVHepa" value="yes" />Yes <br />
+
+                </div>
+                <div>
+                <input type="checkbox"  name="HIVHepa" value="no" />No <br />
+
+                </div>
+                </fieldset>
+
+
+                <div>
+                <label for="exampleInputEmail1">Medical Review of Patient's Biological Systems</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Eyes</label>
+                    <input type="text" class="form-control" name="patientEyes" placeholder="Eyes Review">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Respiratory</label>
+                    <input type="text" class="form-control" name="patientLungs" placeholder="Respiratory Review">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Ear/Nose/Throat</label>
+                    <input type="text" class="form-control" name="patientENT" placeholder="ENT Review">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Cardiovascular</label>
+                    <input type="text" class="form-control" name="patientCardiovascular" placeholder="Cardiovascular Review">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Gastrointestinal</label>
+                    <input type="text" class="form-control" name="patientGastrointestinal" placeholder="Gastrointestinal Review">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Musculoskeletal</label>
+                    <input type="text" class="form-control" name="patientMusculoskeletal" placeholder="Musculoskeletal Review">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Skin</label>
+                    <input type="text" class="form-control" name="patientGastrointestinal" placeholder="Skin Review">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Allergic/Immunologic</label>
+                    <input type="text" class="form-control" name="patientAllergic" placeholder="Allergic/Immunologic Review">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Heme/Lymphatic</label>
+                    <input type="text" class="form-control" name="patientLymphatic" placeholder="Heme/Lymphatic Review">
+                </div>
+
+
+                <fieldset>
+                <legend>Is this patient a donor or acceptor?</legend>
+                <div>
+                <input type="checkbox"  name="patientType" value="donor" />Donor <br />
+
+                </div>
+
+                <div>
+                <input type="checkbox" name="patientType" value="acceptor" />Acceptor <br />
+
+                </div>
+                </fieldset>
+
+
+                <fieldset>
+                <legend>(Only if Acceptor) What organs are requested for this patient?</legend>
+                <div>
+                <input type="checkbox" name="organRequest" value="heart"/>Heart <br />
+
+                </div>
+
+                <div>
+                <input type="checkbox"  name="organRequest" value="lungs"/>Lungs <br />
+
+                </div>
+
+                <div>
+                <input type="checkbox"  name="organRequest" value="kidney" />Kidney <br />
+
+                </div>
+                </fieldset>
+
+                <!--
+                  <div class="form-group">
+                    <legend> Upload patient headshot </legend>
+                <form id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
+                 <input id="fileupload" name="myfile" type="file" />
+                <input type="submit" value="submit" id="fileupload" />
+                                  </form>
+                                </div> -->
+
+                <button type="submit" class="btn btn-primary btn-block"> REGISTER</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
